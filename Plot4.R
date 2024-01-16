@@ -1,0 +1,10 @@
+# Plot
+png("plot4.png", width = 480, height = 480)
+par(mfrow = c(2, 2))
+plot(subset_data$DateTime, subset_data$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power")
+plot(subset_data$DateTime, subset_data$Voltage, type = "l", xlab = "datetime", ylab = "Voltage")
+plot(subset_data$DateTime, subset_data$Sub_metering_1, type = "l", xlab = "", ylab = "Sub metering 1")
+lines(subset_data$DateTime, subset_data$Sub_metering_2, col = "red")
+lines(subset_data$DateTime, subset_data$Sub_metering_3, col = "blue")
+plot(subset_data$DateTime, subset_data$Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global Reactive Power")
+dev.off()
